@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table table-hover">
+        <thead><tr>
+            <th>NOMBRE</th>
+            <th>Url</th>
+            <th>Información</th>
+        </tr></thead>
+        <tbody>
+            <tr *ngFor="let pokemon of Pokemones | paginate:{itemsPerPage:3,currentPage:page}">
+                <td >
+                    {{pokemon.name}}
+                </td>
+                <td>{{pokemon.url}}</td>
+                
+                <td><button (click)="verInfo(pokemon.name)" class="btn btn-info">Ver</button></td>
+            </tr>
+        </tbody>
+
+        
+    </table>
+    <pagination-controls (pageChange)="page=$event" previousLabel="Anterior" nextLabel="Siguiente"
+    ></pagination-controls>
+</div>

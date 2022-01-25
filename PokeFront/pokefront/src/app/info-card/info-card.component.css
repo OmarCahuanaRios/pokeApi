@@ -1,0 +1,9 @@
+.carta{
+    margin-right: 1em;
+    display: block;
+}
+#cartaPokemon{
+    margin-left: 100px;
+    height: 100px;
+    width: 100px;
+}
